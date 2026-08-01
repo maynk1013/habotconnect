@@ -1,8 +1,8 @@
 # Task 3: Schema Mapping and Decide Yes or No Validation
 
 **Candidate Full Name:** Mayank  
-**Contact Electronic Mail Address:** REPLACE_WITH_YOUR_EMAIL  
-**Contact Telephone Number:** REPLACE_WITH_YOUR_PHONE  
+**Contact Electronic Mail Address:** mayankrai0310@gmail.com 
+**Contact Telephone Number:** 9711200512
 
 ## Objective
 
