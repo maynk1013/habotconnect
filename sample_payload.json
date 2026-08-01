@@ -1,0 +1,14 @@
+{
+  "event_id": "6f1d2c3a-9b8e-4a7d-91c0-1234567890ab",
+  "parent_full_name": "Priya Sharma",
+  "parent_electronic_mail": "priya.sharma@example.com",
+  "student_full_name": "Arjun Sharma",
+  "student_date_of_birth": "2014-05-12",
+  "learning_support_region": "IN-WEST",
+  "has_diagnosed_learning_difficulty": true,
+  "requires_learning_support_assistant": true,
+  "consent_to_data_processing": true,
+  "consent_to_analytics_export": true,
+  "weekly_support_hours_requested": 6,
+  "payload_schema_version": "1.0.0"
+}

@@ -1,0 +1,10 @@
+project_id                       = "habotconnect-staging-example"
+region                           = "asia-south1"
+environment                      = "staging"
+raw_object_retention_days        = 30
+kms_crypto_key_id                = null
+# Leave service account emails null to let Terraform create them.
+ingest_writer_service_account_email    = null
+analytics_reader_service_account_email = null
+dataset_reader_members           = []
+row_level_security_region_filter = "IN-WEST"

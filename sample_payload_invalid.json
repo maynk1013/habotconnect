@@ -1,0 +1,14 @@
+{
+  "event_id": "not-a-uuid",
+  "parent_full_name": "A",
+  "parent_electronic_mail": "not-an-email",
+  "student_full_name": "B",
+  "student_date_of_birth": "2022-01-01",
+  "learning_support_region": "UNKNOWN-REGION",
+  "has_diagnosed_learning_difficulty": "maybe",
+  "requires_learning_support_assistant": "later",
+  "consent_to_data_processing": false,
+  "consent_to_analytics_export": false,
+  "weekly_support_hours_requested": 99,
+  "payload_schema_version": "9.9.9"
+}

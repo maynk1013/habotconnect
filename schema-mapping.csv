@@ -1,0 +1,14 @@
+event_id,JavaScript Object Notation Type,Django REST Framework Field,BigQuery Column Type,Mode,Validation Limits,Decide Yes or No Gate,Notes
+event_id,string (Universally Unique Identifier),UUIDField,STRING,REQUIRED,Valid Universally Unique Identifier version 4,Not applicable,Primary correlation key across Storage and BigQuery
+ingested_at,string (timestamp generated server-side),DateTimeField auto_now_add,TIMESTAMP,REQUIRED,Coordinated Universal Time,Not applicable,Set by platform; not accepted from client payload
+parent_full_name,string,CharField,STRING,REQUIRED,Minimum length 2; Maximum length 120; trim whitespace,Not applicable,Legal full name of parent or guardian
+parent_electronic_mail,string,EmailField,STRING,REQUIRED,Maximum length 254; valid electronic mail format,Not applicable,Parent contact address
+student_full_name,string,CharField,STRING,REQUIRED,Minimum length 2; Maximum length 120; trim whitespace,Not applicable,Legal full name of student
+student_date_of_birth,string (International Organization for Standardization 8601 date),DateField,DATE,REQUIRED,Format Year-Month-Day; age 5 to 18 inclusive,is_student_age_eligible,Hard gate — reject when No
+learning_support_region,string,ChoiceField,STRING,REQUIRED,Must be one of IN-WEST IN-NORTH IN-SOUTH IN-EAST SG-CENTRAL AE-DUBAI,is_learning_support_region_recognized,Used by BigQuery Row-Level Security
+has_diagnosed_learning_difficulty,boolean,BooleanField,BOOLEAN,REQUIRED,Strict boolean true or false only,has_diagnosed_learning_difficulty,Informational decision; not a hard reject gate
+requires_learning_support_assistant,boolean,BooleanField,BOOLEAN,REQUIRED,Strict boolean true or false only,requires_learning_support_assistant,Clustering key in BigQuery
+consent_to_data_processing,boolean,BooleanField,BOOLEAN,REQUIRED,Must be true,has_valid_parent_consent_to_process,Hard gate — reject when No
+consent_to_analytics_export,boolean,BooleanField,BOOLEAN,REQUIRED,Must be true for analytics visibility,has_valid_analytics_export_consent,Row-Level Security also filters false
+weekly_support_hours_requested,integer,IntegerField,INTEGER,REQUIRED,Minimum 1; Maximum 40 inclusive,is_weekly_support_hours_within_limit,Hard gate — reject when No
+payload_schema_version,string,ChoiceField,STRING,REQUIRED,Must equal 1.0.0,is_schema_version_supported,Prevents silent schema drift into BigQuery
